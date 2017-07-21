@@ -30,7 +30,7 @@ function buildMessage(issue) {
     color: getColor(issue),
     author_name: issue.assignee ? issue.assignee.login : 'Unassigned',
     author_icon: issue.assignee ? issue.assignee.avatar_url : null,
-    text: `<${issue.html_url}|${issue.key}> \`${issue.state}\` ${issue.title}`,
+    text: `<${issue.html_url}|${issue.number}> \`${issue.state}\` ${issue.title}`,
     mrkdwn_in: ['text']
   };
 }
