@@ -1,0 +1,43 @@
+{
+  "name": "hubot-github-issue-pr-fetcher",
+  "version": "1.0.0",
+  "description": "Bot fetching GitHub issue and PR details",
+  "main": "index.js",
+  "author": "sgaestel",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "build": "babel src -d .",
+    "prepublish": "npm run build",
+    "test": "npm run build && ava"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "got": "^7.1.0",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-latest": "^6.16.0",
+    "eslint": "^3.14.0",
+    "grunt": "^1.0.1",
+    "grunt-release": "^0.14.0",
+    "prettier": "^1.5.3"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "extends": ["eslint:recommended"],
+    "rules": {
+      "linebreak-style": ["error", "unix"],
+      "max-params": ["warn", 3]
+    }
+  }
+}
