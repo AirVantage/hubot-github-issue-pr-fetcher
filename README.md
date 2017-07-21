@@ -9,7 +9,7 @@ hubot-github-issue-pr-fetcher
 Requires the following environment variables to be set:
 
 - `GITHUB_OWNER`
-- `GITHUB_PROJECTS`
+- `GITHUB_PROJECTS_KEYS`
     + e.g: `hubot-jira-issue-fetcher,node-tech-mail`
 - `GITHUB_TOKEN`
 
