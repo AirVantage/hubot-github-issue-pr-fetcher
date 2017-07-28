@@ -1,6 +1,6 @@
 {
   "name": "hubot-github-issue-pr-fetcher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Bot fetching GitHub issue and PR details",
   "main": "index.js",
   "author": "sgaestel",

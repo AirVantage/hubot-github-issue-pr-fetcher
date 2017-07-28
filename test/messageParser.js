@@ -2,21 +2,21 @@ import test from 'ava';
 import messageParser from '../lib/messageParser';
 
 const configuration = {
-  projectsKeys: 'hubot-jira-issue-fetcher,node-tech-mail'.split(',')
+  projectsKeys: 'hubot-jira-issue-fetcher,node6-tech-mail'.split(',')
 };
 
 const parser = messageParser(configuration);
 
 test('parse simple key', t => {
   let message = parser.extractIssueKeys({
-    text: 'Working on hubot-jira-issue-fetcher#333. And hubot-jira-issue-fetcher#4567, node-tech-mail#3333! '
+    text: 'Working on hubot-jira-issue-fetcher#333. And hubot-jira-issue-fetcher#4567, node6-tech-mail#3333! '
   });
   t.is(message.issueKeys.length, 3);
 });
 
 test('only returns known issues', t => {
   let message = parser.extractIssueKeys({
-    text: 'Working on node-tech-mail#3456 and TOTO-25'
+    text: 'Working on node6-tech-mail#3456 and TOTO-25'
   });
   t.is(message.issueKeys.length, 1);
 });

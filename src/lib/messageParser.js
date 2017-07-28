@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const ALL_GITHUB_KEY_MATCHER = /[A-Za-z\-\_]*#\d+/g;
+const ALL_GITHUB_KEY_MATCHER = /[A-Za-z0-9\-\_]*#\d+/g;
 
 export default configuration => {
   return {
